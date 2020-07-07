@@ -8,16 +8,7 @@ export class UsersService {
 
     constructor(@InjectModel('User') private readonly userModel:Model<User>) {};
 
-
-    private readonly users: User[] = [
-        {
-            name: "a",
-            age: 1,
-            password: '1'
-        }
-    ]
-
-    findAll(): User[] {
-        return this.users
+    async createUser(user): Promise<User> {
+        return await new this.userModel(user).save();
     }
 }
