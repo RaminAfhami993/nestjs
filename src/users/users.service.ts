@@ -11,4 +11,8 @@ export class UsersService {
     async createUser(user): Promise<User> {
         return await new this.userModel(user).save();
     }
+
+    async findOne(filter): Promise<User> {
+        return await this.userModel.findOne(filter);
+    }
 }
