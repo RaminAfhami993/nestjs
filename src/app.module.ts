@@ -10,7 +10,8 @@ import config from './config/keys';
 
 
 @Module({
-  imports: [UsersModule, MongooseModule.forRoot(config.mongodbAddress), AuthModule],
+  // imports: [UsersModule, MongooseModule.forRoot(config.mongodbAddress), AuthModule],
+  imports: [AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
