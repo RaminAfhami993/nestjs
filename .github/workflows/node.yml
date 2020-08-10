@@ -20,4 +20,4 @@ jobs:
         node-version: 12
     - run: npm ci
     - run: npm run build --if-present
-    - run: meteor
+    - run: npm start
